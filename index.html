@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>电视直播</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		function isMobile() {
+			var userAgentInfo = navigator.userAgent;
+			var mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+			var mobileFlag = false;
+			for (var i = 0; i < mobileAgents.length; i++) {
+				if (userAgentInfo.indexOf(mobileAgents[i]) != -1) {
+					mobileFlag = true;
+					break;
+				}
+			}
+			return mobileFlag;
+		}
+		$(function () {
+			var windowWidth = $(window).width() < 1200;
+			if (windowWidth || isMobile()) {
+				location.href = 'https://tv.cctv.com/live/cctv1/m/';
+			}
+		});
+	</script>
+	<style>
+		body {background: #F6F6F6;}
+		iframe {background: #000;}
+		ul {height: 529px;overflow: scroll;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>
+				电视直播
+				<small></small>
+			</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-10">
+				<iframe src="https://tv.cctv.com/live/cctv1/#video" name="video" frameborder="0" scrolling="no" width="958" height="529" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+			<div class="col-md-2">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="https://tv.cctv.com/live/cctv1/#video" target="video">CCTV-1 综合</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv2/#video" target="video">CCTV-2 财经</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv3/#video" target="video">CCTV-3 综艺</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv4/#video" target="video">CCTV-4 中文国际(亚)</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv5/#video" target="video">CCTV-5 体育</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv5plus/#video" target="video">CCTV-5+ 体育赛事</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv6/#video" target="video">CCTV-6 电影</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv7/#video" target="video">CCTV-7 国防军事</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv8/#video" target="video">CCTV-8 电视剧</a></li>
+					<li><a href="https://tv.cctv.com/live/cctvjilu/#video" target="video">CCTV-9 记录</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv10/#video" target="video">CCTV-10 科教</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv11/#video" target="video">CCTV-11 戏曲</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv12/#video" target="video">CCTV-12 社会与法</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv13/#video" target="video">CCTV-13 新闻</a></li>
+					<li><a href="https://tv.cctv.com/live/cctvchild/#video" target="video">CCTV-14 少儿</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv15/#video" target="video">CCTV-15 音乐</a></li>
+					<li><a href="https://tv.cctv.com/live/cctv17/#video" target="video">CCTV-17 农业农村</a></li>
+					<li><a href="https://tv.cctv.com/live/cctveurope/#video" target="video">CCTV-4 中文国际(欧)</a></li>
+					<li><a href="https://tv.cctv.com/live/cctvamerica/#video" target="video">CCTV-4 中文国际(美)</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
